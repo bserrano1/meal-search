@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #18181b;           /* angular.dev dark background */
+  --color-surface: #23272f;      /* angular.dev surface */
+  --color-border: #23272f;       /* angular.dev border */
+  --color-text: #f8fafc;         /* angular.dev text */
+  --color-text-muted: #a3a3a3;   /* angular.dev muted text */
+  --color-primary: #c3002f;      /* angular.dev red */
+  --color-primary-dark: #a50026; /* darker angular red */
+  --color-secondary: #4f8cff;    /* angular.dev blue accent */
+  --color-accent: #00bfae;       /* angular.dev teal accent */
+  --color-accent-dark: #009e90;  /* darker teal accent for hover */
+  --card-radius: 0.75rem;        /* rounded-xl */
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.12); /* shadow-xl */
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
