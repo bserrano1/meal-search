@@ -23,8 +23,9 @@ A modern, dark-themed React app for searching and exploring meals, built with Vi
 - [React Router v6](https://reactrouter.com/)
 - [TheMealDB API](https://www.themealdb.com/api.php)
 - [Tailwind CSS](https://tailwindcss.com/) (utility classes)
+- [Docker](https://www.docker.com/) + [Nginx](https://www.nginx.com/) (for deployment)
 
-## Getting Started
+## Getting Started (Development)
 1. **Install dependencies:**
    ```bash
    npm install
@@ -37,6 +38,21 @@ A modern, dark-themed React app for searching and exploring meals, built with Vi
    ```
 4. **Open in browser:**
    - Visit [http://localhost:5173](http://localhost:5173)
+
+## Docker Deployment
+
+1. **Build the Docker image:**
+   ```bash
+   docker build -t meal-search-app .
+   ```
+2. **Run the container:**
+   ```bash
+   docker run -d -p 8080:80 --name meal-search meal-search-app
+   ```
+3. **Visit your app:**
+   - Open [http://localhost:8080](http://localhost:8080) (or your server's IP)
+
+> The provided `Dockerfile` uses multi-stage builds and Nginx for production-ready static serving. The `nginx.conf` ensures proper SPA routing.
 
 ## Folder Structure
 - `src/components/` — Reusable UI components
